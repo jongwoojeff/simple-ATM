@@ -2,7 +2,7 @@
 
 This is a simple ATM controller implemented in C++ using Xcode 11.2.1.
 
-You can clone this project from: https://github.com/jongwoojeff/simple-ATM.git
+This project can be cloned from: https://github.com/jongwoojeff/simple-ATM.git
 
 ## Build
 
