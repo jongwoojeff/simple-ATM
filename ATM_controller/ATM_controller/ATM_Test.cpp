@@ -64,7 +64,12 @@ TEST_CASE("withdraw 999 from spend account c3") {
     REQUIRE(machine.spendBalance() == 0);
 }
 
-TEST_CASE("Illegal deposit to spend acccount c2") {
+TEST_CASE("illegal deposit to spend acccount c2") {
     machine.accessCard("2222-2222-2222-2222", 2222);
     REQUIRE(machine.depositSpend(-1) == "Deposit must be greater than zero");
+}
+
+TEST_CASE("illegal withdraw from growth acccount c2") {
+    machine.accessCard("2222-2222-2222-2222", 2222);
+    REQUIRE(machine.withdrawGrowth(300) == "Not enough balance");
 }
